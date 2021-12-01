@@ -1,0 +1,29 @@
+{
+    "version": "0.0.1",
+    "name": "TGSN Staff HQ",
+    "app-name": "TGSN Staff HQ",
+    "package-name": "tgsnstaffhq",
+    "project-type": "webview",
+    "icon": "./assets/icon/logo.png",
+    "dist-path": "./dist",
+    "permission": [
+        "android.permission.INTERNET"
+    ],
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start:dev": "node main.js",
+        "build": "androidjs build"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "androidjs": "^2.0.2"
+    },
+    "project-name": "TGSN Staff App",
+    "theme": {
+        "fullScreen": true,
+        "colorPrimary": "#333333",
+        "colorAccent": "#ff6600"
+    }
+}

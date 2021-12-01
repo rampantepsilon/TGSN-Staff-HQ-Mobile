@@ -1,0 +1,100 @@
+body {
+  background-image: url("./images/background.jpg");
+}
+html, body, #main {
+  height: calc(100% - 5px);
+  font-family: Sancreek;
+}
+
+#top{
+  font-size: 2em;
+  color: white;
+}
+#uNameStatic{
+  font-size: 1.5em;
+  color: white;
+}
+#points{
+  font-size: .5em;
+}
+#loginError{
+  color: white;
+}
+
+.chat{
+  background-color: rgba(255, 165, 0, 0.5)
+}
+
+.textarea, .textarea::placeholder{
+  width: calc(100% - 90px);
+  color: orange;
+  background-color: #444;
+}
+
+#send-message{
+  color: orange;
+  background-color: #333;
+  padding-top: 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orange;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkorange;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute;; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 89%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255,255,255,0.4); /* Black w/ opacity */
+  text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #000000;
+  color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}

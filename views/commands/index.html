@@ -25,6 +25,7 @@
         <style>
           body{
             background-image: url('../images/background.jpg');
+            font-family: Sancreek;
           }
           #main{
             background-color: rgba(255,255,255,0.5)
@@ -67,5 +68,11 @@
         <table width='100%' id='commandList' style='border-style: outset'>
         </table>
       </div>
+      <div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
+      <script>
+        const app = firebase.app();
+        const db = firebase.firestore();
+      </script>
+      <script src='../scripts/userData.js'></script>
     </body>
 </html>

@@ -12,12 +12,16 @@ function init(){
   if (loggedIn == 'yes'){
     if (position == 'Network Admin' || position == 'TGSN Coordinator'){
     content.innerHTML = [`
+      <div align='center' onclick='window.location.href = "./messages/index.html";'>Message Board</div>
       <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
       <div align='center' onclick='window.location.href = "./schedule/index.html";'>Schedule Editor</div>
+      <div align='center' onclick='window.location.href = "./commands/index.html";'>TGSNBot Commands</div>
       <div align='center' onclick='logout()'>Logout</div>`]
     } else {
       content.innerHTML = [`
+        <div align='center' onclick='window.location.href = "./messages/index.html";'>Message Board</div>
         <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
+        <div align='center' onclick='window.location.href = "./commands/index.html";'>TGSNBot Commands</div>
         <div align='center' onclick='logout()'>Logout</div>`]
     }
   } else {

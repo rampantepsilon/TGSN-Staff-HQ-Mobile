@@ -27,8 +27,7 @@ function fLogin(){
             timestamp.update({
               [tsUName]: tsTime
             })
-            localStorage.setItem('username', uName);
-            localStorage.setItem('password', pWord);
+            localStorage.setItem('username', userNames[j]);
             window.location.href = "../index.html";
           }
         }

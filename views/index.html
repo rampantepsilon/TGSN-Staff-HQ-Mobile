@@ -77,17 +77,113 @@
 		#mainContent div:hover{
 			background-color: orange
 		}
+		#myBtn{
+			border-style: outset;
+			background-color: rgba(255,255,255,0.5)
+		}
+		#myBtn:hover{
+			background-color: orange
+		}
+		/* The Modal (background) */
+		.modal {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  width: 100%; /* Full width */
+		  height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+		/* Modal Content/Box */
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: 15% auto; /* 15% from the top and centered */
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 80%; /* Could be more or less, depending on screen size */
+		}
+
+		/* The Close Button */
+		.close {
+		  color: #aaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: black;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
 	</style>
   <script type='text/javascript' src='./scripts/content.js'></script>
   <script type='text/javascript' src='./scripts/index.js'></script>
 </body>
+
+
+<div id="myBtn" align='center' style='width: 100%; position:fixed; bottom: 20; left: 0'>Changelog</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<h4 align='center'>TGSN Staff HQ (Mobile)<br>v0.0.2-alpha</h4>
+		<h6>Changelog:</h6>
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+
+</div>
+
+<div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
+
 <!--In-Page Scripting-->
 <script>
   function home(){
     window.location.href = './index.html';
   }
-</script>
+	//Initialize Values
+	const users = db.collection('users').doc('logins');
+	var user = localStorage.getItem('username');
 
-<div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
-<script src='./scripts/userData.js'></script>
+	if (user){
+	  document.getElementById('user').innerHTML = 'Logged In As ' + user;
+	} else {
+	  document.getElementById('user').innerHTML = 'Not Logged In';
+	}
+
+	var tsTime = new Date().toLocaleString();
+
+	timestamp.update({
+	  [user]: tsTime
+	})
+
+	// Get the modal
+	var modal = document.getElementById("myModal");
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+	// When the user clicks on the button, open the modal
+	btn.onclick = function() {
+	  modal.style.display = "block";
+	}
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	    modal.style.display = "none";
+	  }
+	}
+</script>
 </html>

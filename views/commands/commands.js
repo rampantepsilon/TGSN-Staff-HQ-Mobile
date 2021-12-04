@@ -20,16 +20,27 @@ function loadCommands(){
 
     list.sort();
 
+    var rowInit = commandList.insertRow(0);
+    var cell1Init = rowInit.insertCell(0);
+    var cell2Init = rowInit.insertCell(1);
+    cell1Init.innerHTML = "Command";
+    cell2Init.innerHTML = 'Response';
+    cell1Init.setAttribute('class', 'commands header')
+    cell1Init.setAttribute('width', '30%')
+    cell1Init.setAttribute('align', 'center')
+    cell2Init.setAttribute('class', 'commands header');
+    cell2Init.setAttribute('align', 'center');
+
     for (var i = 0; i < data.list.length; i++){
-      var row = commandList.insertRow(i);
+      var row = commandList.insertRow(i+1);
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
 
       cell1.innerHTML = '!' + list[i];
       cell2.innerHTML = data.commands[list[i]];
       cell1.setAttribute('class', 'commands')
-      cell1.setAttribute('width', '40%')
-      cell2.setAttribute('class', 'commands')
+      cell1.setAttribute('width', '30%')
+      cell2.setAttribute('class', 'commands response')
     }
   });
 }

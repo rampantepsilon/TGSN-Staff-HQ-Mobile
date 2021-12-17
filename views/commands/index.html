@@ -55,7 +55,7 @@
     </head>
 
     <body onload='loadCommands()'>
-    	<table width='100%' id='topBar' height='50px' onclick='home()'>
+    	<table width='100%' id='topBar' height='50px' onclick='home()' style='position:fixed; top: 0; left: 0;'>
     		<tr>
     			<td width='20%' align='center'>
             <img src='../images/logo.png' width='40px' height="40px" />
@@ -64,12 +64,12 @@
             <span id='header'>TGSN Staff HQ</span>
     			</td>
     		</tr>
-    	</table>
+    	</table><br>
       <div id='main'>
         <h1 align='center'>TGSNBot Commands</h1>
         <table width='100%' id='commandList' style='border-style: outset'>
         </table>
-      </div>
+      </div><br>
       <div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
       <script>
         const app = firebase.app();

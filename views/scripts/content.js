@@ -8,12 +8,14 @@ var adminContent = [`
   <div align='center' onclick='window.location.href = "./messages/index.html";'>Message Board</div>
   <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
   <div align='center' onclick='window.location.href = "./schedule/index.html";'>Schedule Editor</div>
-  <div align='center' onclick='window.location.href = "./commands/index.html";'>TGSNBot Commands</div>
+  <div align='center' onclick='window.location.href = "./commands/admin.html";'>TGSNBot Commands</div>
+  <!--<div align='center' onclick='window.location.href = "https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager";'>TGSN Twitch Dashboard</div>-->
   <div align='center' onclick='logout()'>Logout</div>`]
 var baseContent = [`
   <div align='center' onclick='window.location.href = "./messages/index.html";'>Message Board</div>
   <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
   <div align='center' onclick='window.location.href = "./commands/index.html";'>TGSNBot Commands</div>
+  <!--<div align='center' onclick='window.location.href = "https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager";'>TGSN Twitch Dashboard</div>-->
   <div align='center' onclick='logout()'>Logout</div>`]
 
 function init(){
@@ -23,7 +25,7 @@ function init(){
 
   if (loggedIn == 'yes'){
     if (position == 'Network Admin' || position == 'TGSN Coordinator'){
-    content.innerHTML = adminContent
+      content.innerHTML = adminContent
     } else {
       content.innerHTML = baseContent
     }

@@ -6,6 +6,8 @@ const timestamp = db.collection('users').doc('timestamp');
 
 var adminContent = [`
   <div align='center' onclick='window.location.href = "./messages/admin.html";'>Message Board</div>
+  <div align='center' onclick='window.location.href = "./shows/admin/tgs.html";'>TGS Resources</div>
+  <div align='center' onclick='window.location.href = "./shows/admin/tgsr.html";'>TGSR Resources</div>
   <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
   <div align='center' onclick='window.location.href = "./schedule/index.html";'>Schedule Editor</div>
   <div align='center' onclick='window.location.href = "./commands/admin.html";'>TGSNBot Commands</div>
@@ -13,6 +15,8 @@ var adminContent = [`
   <div align='center' onclick='logout()'>Logout</div>`]
 var baseContent = [`
   <div align='center' onclick='window.location.href = "./messages/index.html";'>Message Board</div>
+  <div align='center' onclick='window.location.href = "./shows/view/tgs.html";'>TGS Resources</div>
+  <div align='center' onclick='window.location.href = "./shows/view/tgsr.html";'>TGSR Resources</div>
   <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
   <div align='center' onclick='window.location.href = "./commands/index.html";'>TGSNBot Commands</div>
   <!--<div align='center' onclick='window.location.href = "https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager";'>TGSN Twitch Dashboard</div>-->

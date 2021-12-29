@@ -157,8 +157,9 @@
                     <textarea id="chat-txt" class="textarea" placeholder="Insert Message Here" style="width:100%;"></textarea>
                   </div>
                   <div align='center'>
-                    <div style="border: outset; width: 100px; display:inline-block;" align='center' onclick='postChat()' class='button'>Submit</div>
-                    <div style="border: outset; width: 100px; display:inline-block;" align='center' onclick='showHelp()' class='button'>Help</div>
+                    <div style="border: outset; width: 130px; display:inline-block;" align='center' onclick='postChat()' class='button'>Submit</div>
+                    <div style="border: outset; width: 130px; display:inline-block;" align='center' onclick='showMBL()' class='button'>Add Link/Image</div>
+                    <div style="border: outset; width: 130px; display:inline-block;" align='center' onclick='showHelp()' class='button'>Help</div>
                   </div>
                   <div width='100%' id="messages" style='height: 60vh; overflow:auto;'></div>
                 </td>
@@ -220,6 +221,16 @@
         </div>
       </div>
 
+      <div id="mbModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div align='center'>
+            Please enter the URL of your link/image.<br>
+            <input type='text' id='messageBoardLink' value='https://tgsnetwork.org'></input><br>
+            <button onclick='addLinkImage("link")'>Add Link</button><button onclick='addLinkImage("image")'>Add Image</button>
+          </div>
+        </div>
+      </div>
 
       <div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
       <script src='../scripts/userData.js'></script>

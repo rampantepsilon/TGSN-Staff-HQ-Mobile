@@ -131,18 +131,8 @@
 <div id="myModal" class="modal">
 
 	<!-- Modal content -->
-	<div class="modal-content">
+	<div class="modal-content" id='modalContent'>
 		<span class="close">&times;</span>
-		<h4 align='center'>TGSN Staff HQ (Mobile)<br>v0.2.0-beta</h4>
-		<h6>Changelog:</h6>
-		<br>- Added TGS & TGSR Resources
-		<br>- Added ability to update resources from the mobile app (Coordinators and Higher)
-		<br>- Added Add Link/Image Button for Message Board
-		<br>&nbsp;
-		<h6>Upcoming Changes:</h6>
-		<br>- Setting the home screen up as a Dashboard of sorts
-		<br>- Implement updating personal information (i.e. passwords, avatars)
-		<br>- Add VDO.Ninja/Twitch Dashboard
 	</div>
 
 </div>
@@ -179,6 +169,7 @@
 	// When the user clicks on the button, open the modal
 	btn.onclick = function() {
 	  modal.style.display = "block";
+		insertChangelog();
 	}
 	// When the user clicks on <span> (x), close the modal
 	span.onclick = function() {

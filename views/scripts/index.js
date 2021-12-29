@@ -1,3 +1,18 @@
+var version = '0.2.0-beta';
+
+function insertChangelog(){
+  document.getElementById('modalContent').innerHTML += [`<h4 align='center'>TGSN Staff HQ (Mobile)<br>v` + version + `</h4>
+  <h6>Changelog:</h6>
+  <br>- Added TGS & TGSR Resources
+  <br>- Added ability to update resources from the mobile app (Coordinators and Higher)
+  <br>- Added Add Link/Image Button for Message Board
+  <br>&nbsp;
+  <h6>Upcoming Changes:</h6>
+  <br>- Setting the home screen up as a Dashboard of sorts
+  <br>- Implement updating personal information (i.e. passwords, avatars)
+  <br>- Add VDO.Ninja/Twitch Dashboard`]
+}
+
 //Login
 function fLogin(){
   var uName = document.getElementById('uName').value.toLowerCase();

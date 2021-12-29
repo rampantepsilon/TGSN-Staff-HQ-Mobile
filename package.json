@@ -18,7 +18,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "androidjs": "^2.0.2"
+        "@octokit/core": "^3.5.1",
+        "androidjs": "^2.0.2",
+        "dotenv": "^10.0.0"
     },
     "project-name": "TGSN Staff App",
     "theme": {

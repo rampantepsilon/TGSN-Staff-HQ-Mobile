@@ -1,14 +1,14 @@
-var version = '0.2.1-beta';
+var version = '0.3.0-beta';
 
 function insertChangelog(){
-  document.getElementById('modalContent').innerHTML += [`<h4 align='center'>TGSN Staff HQ (Mobile)<br>v` + version + `</h4>
+  document.getElementById('modalContent').innerHTML = [`<h4 align='center'>TGSN Staff HQ (Mobile)<br>v` + version + `</h4>
   <h6>Changelog:</h6>
-  <br>- Fixed issue with Schedule Viewer
+  <br>- Added Ability to update password and avatar
+  <br>- Added VDO.Ninja Viewer
+  <br>- Added Twitch Dashboard
   <br>&nbsp;
   <h6>Upcoming Changes:</h6>
-  <br>- Setting the home screen up as a Dashboard of sorts
-  <br>- Implement updating personal information (i.e. passwords, avatars)
-  <br>- Add VDO.Ninja/Twitch Dashboard`]
+  <br>- Setting the home screen up as a Dashboard of sorts`]
 }
 
 //Login

@@ -4,8 +4,8 @@ body {
 html, body, #main {
   height: calc(100% - 5px);
   font-family: Sancreek;
+  color:black;
 }
-
 #top{
   font-size: 2em;
   color: white;

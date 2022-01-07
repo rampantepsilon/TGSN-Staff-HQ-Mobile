@@ -11,7 +11,11 @@ var adminContent = [`
   <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
   <div align='center' onclick='window.location.href = "./schedule/index.html";'>Schedule Editor</div>
   <div align='center' onclick='window.location.href = "./commands/admin.html";'>TGSNBot Commands</div>
-  <!--<div align='center' onclick='window.location.href = "https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager";'>TGSN Twitch Dashboard</div>-->
+  <div align='center' onclick='window.location.href = "./usrMgr/personal.html";'>User Management</div>
+  <div align='center'>-------</br>External Resources</br>-------</div>
+  <a href='https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager' target='_blank' style='color:black; text-decoration: none;'><div align='center'>TGSN Twitch Dashboard</div></a>
+  <a href='https://obs.ninja/?room=thegamingsaloonnetwork&hash=e588' target="_blank" style='color:black; text-decoration: none;'><div align='center'>VDO.Ninja Viewer</div></a>
+  <div align='center'>-------</br>App Functions</br>-------</div>
   <div align='center' onclick='logout()'>Logout</div>`]
 var baseContent = [`
   <div align='center' onclick='window.location.href = "./messages/index.html";'>Message Board</div>
@@ -19,7 +23,11 @@ var baseContent = [`
   <div align='center' onclick='window.location.href = "./shows/view/tgsr.html";'>TGSR Resources</div>
   <div align='center' onclick='window.location.href = "./viewer/index.html";'>Schedule Viewer</div>
   <div align='center' onclick='window.location.href = "./commands/index.html";'>TGSNBot Commands</div>
-  <!--<div align='center' onclick='window.location.href = "https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager";'>TGSN Twitch Dashboard</div>-->
+  <div align='center' onclick='window.location.href = "./usrMgr/personal.html";'>User Management</div>
+  <div align='center'>-------</br>External Resources</br>-------</div>
+  <a href='https://dashboard.twitch.tv/u/thegamingsaloonnetwork/stream-manager' target='_blank' style='color:black; text-decoration: none;'><div align='center'>TGSN Twitch Dashboard</div></a>
+  <a href='https://obs.ninja/?room=thegamingsaloonnetwork&hash=e588' target="_blank" style='color:black; text-decoration: none;'><div align='center'>VDO.Ninja Viewer</div></a>
+  <div align='center'>-------</br>App Functions</br>-------</div>
   <div align='center' onclick='logout()'>Logout</div>`]
 
 function init(){

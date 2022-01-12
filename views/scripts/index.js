@@ -1,14 +1,14 @@
-var version = '0.3.0-beta';
+var version = '1.0.0';
 
 function insertChangelog(){
   document.getElementById('modalContent').innerHTML = [`<h4 align='center'>TGSN Staff HQ (Mobile)<br>v` + version + `</h4>
   <h6>Changelog:</h6>
-  <br>- Added Ability to update password and avatar
-  <br>- Added VDO.Ninja Viewer
-  <br>- Added Twitch Dashboard
+  <br>- Fixed Link for OBS Ninja
+  <br>- Added Dashboard to home screen
   <br>&nbsp;
   <h6>Upcoming Changes:</h6>
-  <br>- Setting the home screen up as a Dashboard of sorts`]
+  <br>- Design changes to Dashboard
+  <br>- Bug fixes/Improvements On Code`]
 }
 
 //Login

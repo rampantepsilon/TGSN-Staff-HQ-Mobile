@@ -188,12 +188,15 @@
 	}
 
 	var linkVisible = 0;
+
 	function showLinks(){
 		if (linkVisible == 0){
 			$('#mainContent').show();
+			$('#dashContent').hide();
 			linkVisible = 1;
 		} else {
 			$('#mainContent').hide();
+			$('#dashContent').show();
 			linkVisible = 0;
 		}
 	}

@@ -64,29 +64,35 @@ function dashInit(){
   content.innerHTML = [`
     <table width='100%'>
       <tr>
-        <td>
-          <h4 align='center'><u>Recent Message</u></h4>
-          <div id='messages'></div>
-        </td>
-      </tr>
-      <tr>
-        <td style='background-color:rgba(0,0,0,0.5)'>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4 align='center'><u>Schedule</u></h4>
-          <div id='upcomingEvents'></div>
-        </td>
-      </tr>
-      <tr>
-        <td style='background-color:rgba(0,0,0,0.5)'>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4 align='center'><u>TGSNBot Commands</u></h4>
-          <div id='commandList'></div>
+        <td align='center'>
+          <table>
+            <tr>
+              <td align='center'>
+                <h4 align='center'><u>Recent Message</u></h4>
+                <div id='messages'></div>
+              </td>
+            </tr>
+            <tr>
+              <td style='background-color:rgba(0,0,0,0.5)'>
+              </td>
+            </tr>
+            <tr>
+              <td align='center'>
+                <h4 align='center'><u>Schedule</u></h4>
+                <div id='upcomingEvents'></div>
+              </td>
+            </tr>
+            <tr>
+              <td style='background-color:rgba(0,0,0,0.5)'>
+              </td>
+            </tr>
+            <tr>
+              <td align='center'>
+                <h4 align='center'><u>TGSNBot Commands</u></h4>
+                <div id='commandList' align='left'></div>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
@@ -102,15 +108,17 @@ function dashInit(){
 
       } else {
         const msg = [`
-          <div id ='` + i + `' class='chat' style='border-style: double; padding: 5px; position: relative'>
-            <div align='left' valign='top' style="width: 100%;">` +
+          <div id ='` + i + `' class='chat' style='border-style: double; padding: 5px; position: relative; width: 75%'>
+            <div align='left' valign='top'>` +
               data[i][1] +
             `</div>
-            <div width='150px' valign='top' align='right'><font color='#333' size='2em'>Posted At `
+            <div valign='top' align='right'><font color='#333' size='2em'>Posted At `
               + data[i][0] + `</font>
             </div>
           </div>`];
         document.getElementById("messages").innerHTML = msg + document.getElementById("messages").innerHTML;
+        var link = document.getElementsByClassName('chat')[0].getElementsByTagName('div')[0].getElementsByTagName('a')[0].innerHTML;
+        document.getElementsByClassName('chat')[0].getElementsByTagName('div')[0].getElementsByTagName('a')[0].innerHTML = link.substr(0,19) + '...' + link.substr(67)
       }
     }
   })
@@ -133,6 +141,7 @@ function dashInit(){
 
     for (var i = 0; i < data.list.length; i++){
       commandList.innerHTML += '<b><u>!' + list[i] + '</u></b><br> -->' + data.commands[list[i]] + '<br><br>';
+      commandList.style.width = '75%'
     }
   });
 }
@@ -175,7 +184,7 @@ async function getEvents(){
           let dow = weekday[d2.getDay()]
 
           //Add to list for sorting
-          dates[j] = eventDate + "<div align='center'><h5 align='right' style='background-color: rgba(0, 0, 0, 0.5); color: white; text-shadow: 2px 2px black; padding-right: 4px;'>" + dow + ' ' + doc.data()[i].date + '</h5>' + doc.data()[i].time + '<br>' + doc.data()[i].preShow + '<br>' + doc.data()[i].show + '<br>' + doc.data()[i].game + "<br></div>";
+          dates[j] = eventDate + "<div align='center' style='width: 75%'><h5 align='right' style='background-color: rgba(0, 0, 0, 0.5); color: white; text-shadow: 2px 2px black; padding-right: 4px;'>" + dow + ' ' + doc.data()[i].date + '</h5>' + doc.data()[i].time + '<br>' + doc.data()[i].preShow + '<br>' + doc.data()[i].show + '<br>' + doc.data()[i].game + "<br></div>";
           j++;
         }
       }

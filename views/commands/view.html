@@ -37,23 +37,10 @@
 
     <body onload='loadCommands()'>
       <h1 align='center'>TGSNBot Commands</h1>
-      <table width='100%'>
+      <table align='center' width='95%' id='commandList' style='border-style: outset'>
         <tr>
-          <td align='center'>
-            Command: !<input type='text' id="command" placeholder="Command Name"></input><br>
-            Response: <input type='text' size='40' id="response" placeholder="Bot Response"></input>
-            <br>
-            <div style="border: outset; width: 100px; display:inline-block; background-color:orange;font-family: Sancreek;" align='center' onclick='addCommand()' class='button'>Submit</div>
-            <div style="border: outset; width: 150px; display:inline-block; background-color:orange;font-family: Sancreek;" align='center' onclick='remCommand()' class='button'>Remove Command</div>
-          </td>
-        </tr>
-      </table>
-      <table align='center' width='95%' style='border-style: outset'>
-        <tr>
-          <td>
-            <table id='commandList' width='100%'>
-            </table>
-          </td>
+          <td width='40%'><h3 align='center'><u>Command</u></h3></td>
+          <td width='60%'><h3 align='center'><u>Response</u></h3></td>
         </tr>
       </table>
     </body>

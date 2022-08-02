@@ -2,7 +2,6 @@
     <head>
         <title>TGSN Staff HQ v0.0.1-alpha</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src='commands.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Raleway:600|Sancreek&display=swap" rel="stylesheet">
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
@@ -22,36 +21,59 @@
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
         </script>
+        <script src='discordlink.js'></script>
+        <script src='index.js'></script>
         <style>
-          body{
-            background-color: rgba(255,255,255,0.5)
-          }
-          td, h1 {
+          td{
             font-family: Sancreek;
+            text-align: center;
           }
-          .commands{
-            border-style:inset;
+          #board{
+            background-color: rgba(255,255,255,0.75);
+            border-radius: 50% 50% 0% 0%;
+          }
+          #boardData{
+            background-color: rgba(255,255,255,0.75);
+          }
+          /* width */
+          ::-webkit-scrollbar {
+            width: 7px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #333;
+          }
+
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: orange;
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: darkorange;
           }
         </style>
     </head>
 
-    <body onload='loadCommands()'>
-      <h1 align='center'>TGSNBot Commands</h1>
-      <table width='100%'>
+    <body onload='listener()'>
+      <table width='100%' style='border-spacing: 0px;'>
         <tr>
-          <td align='center'>
-            Command: !<input type='text' id="command" placeholder="Command Name"></input><br>
-            Response: <input type='text' size='40' id="response" placeholder="Bot Response"></input>
-            <br>
-            <div style="border: outset; width: 100px; display:inline-block; background-color:orange;font-family: Sancreek;" align='center' onclick='addCommand()' class='button'>Submit</div>
-            <div style="border: outset; width: 150px; display:inline-block; background-color:orange;font-family: Sancreek;" align='center' onclick='remCommand()' class='button'>Remove Command</div>
+          <td style='border: 1px solid;' id='board'>
+            &nbsp;</br>
+            <h2><u>Message Board</u></h2>
+            <h3>Welcome to The Gaming Saloon Network Staff HQ! This location will hold important information regarding TGSN Staff!</h3>
           </td>
         </tr>
-      </table>
-      <table align='center' width='95%' style='border-style: outset'>
         <tr>
-          <td>
-            <table id='commandList' width='100%'>
+          <td style='border: 1px solid;' id='boardData'>
+            <table width='100%'>
+              <tr>
+                <td>
+                  <div width='100%' id="messages"></div>
+                </td>
+              </tr>
             </table>
           </td>
         </tr>

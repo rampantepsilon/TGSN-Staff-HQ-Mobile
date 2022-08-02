@@ -20,8 +20,9 @@ function showTGSArticlesUser(){
       <table width='100%'>
         <tr>
           <td align='center' valign='top' colspan='3'>
-            <h3><u>TGS Resources</u></h3>
-          </td>
+            <h3><u>TGS Resources</u></h3>` +
+            `<a href='https://tgsnetwork.org/tgsarticles.html' target='_blank'>Open in New Window</a>` +
+          `</td>
         </tr>
         <tr>
           <td colspan='3' align='center'>
@@ -31,7 +32,7 @@ function showTGSArticlesUser(){
       </table>`]
 
     $('#articlesWin').css('width', playerWidth +'px');
-    $('#articlesWin').css('height', (playerHeight - 60) +'px');
+    $('#articlesWin').css('height', playerHeight +'px');
   })
 }
 function showTGSArticles(){
@@ -73,13 +74,15 @@ function showTGSArticles(){
       <tr>
         <td align='center' id='body'>
           Enter the new link for TGS Articles:<input id='tgsArticleLink'><br>
-          <button onclick='updateTGSArticles()'>Update Viewer Articles</button>
+          <button onclick='updateTGSArticles()'>Update Articles</button>
           <button onclick='clearTGSArticles()'>Clear Link Field</button>
         </td>
       </tr>`]
 
+    var playerWidth = window.innerWidth-50;
+    var playerHeight = window.innerHeight-110;
     $('#articlesWin').css('width', playerWidth +'px');
-    $('#articlesWin').css('height', (playerHeight - 80) +'px');
+    $('#articlesWin').css('height', playerHeight +'px');
   })
 }
 //Update Viewer Facing TGS Articles
@@ -115,7 +118,7 @@ function showTGSRUser(){
   var total;
 
   //Framework
-  document.getElementById('showBody').innerHTML = ''
+  document.getElementById('showBody').innerHTML = [`<div align='center'><h3>Video Source</h3><a href='https://tubitv.com/series/539/beast-wars' target='_blank'>Click Here to watch</a></div>`]
 
   tgsrVideos.onSnapshot(doc => {
     const data = doc.data();
@@ -129,14 +132,15 @@ function showTGSRUser(){
         </tr>
         <tr>
           <td colspan='3' align='center'>
-            <div align='center'>Videos -> <a href='` + data.source + `' target='_blank'>Click Here to watch</a></div>
-            <iframe src='` + data.notes + `' id='notesWin'></iframe>
+            <div align='center'>Videos -> <a href='` + data.source + `' target='_blank'>Click Here to watch</a></div>` +
+            `<a href='https://tgsnetwork.org/tgsrarticles.html' target='_blank'>Open in New Window</a>` +
+            `<iframe src='` + data.notes + `' id='notesWin'></iframe>
           </td>
         </tr>
       </table>`]
 
     $('#notesWin').css('width', playerWidth +'px');
-    $('#notesWin').css('height', (playerHeight - 85) +'px');
+    $('#notesWin').css('height', (playerHeight-25) +'px');
   })
 
   document.getElementById('editModal').innerHTML = [`
@@ -161,7 +165,7 @@ function showTGSR(){
   var total;
 
   //Framework
-  document.getElementById('showBody').innerHTML = ''
+  document.getElementById('showBody').innerHTML = [`<div align='center'><h3>Video Source</h3><a href='https://tubitv.com/series/539/beast-wars' target='_blank'>Click Here to watch</a></div>`]
 
   tgsrVideos.onSnapshot(doc => {
     const data = doc.data();
@@ -183,7 +187,7 @@ function showTGSR(){
       </table>`]
 
     $('#notesWin').css('width', playerWidth +'px');
-    $('#notesWin').css('height', (playerHeight - 100) +'px');
+    $('#notesWin').css('height', (playerHeight-45) +'px');
   })
 
   document.getElementById('editModal').innerHTML = [`

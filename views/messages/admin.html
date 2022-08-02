@@ -24,33 +24,16 @@
         <script src='discordlink.js'></script>
         <script src='index.js'></script>
         <style>
-          html, body {
-      	    height: 99%;
+          td{
             font-family: Sancreek;
-          }
-          body {
-            background-image: url('../images/background.jpg');
-          }
-          #main{
-            background-color: rgba(255,255,255,0.5)
-          }
-      		#topBar{
-      			background-color: rgba(0,0,0,1);
-            color: white;
-      		}
-          #header{
-            font-size: 24px;
+            text-align: center;
           }
           #board{
             background-color: rgba(255,255,255,0.75);
             border-radius: 50% 50% 0% 0%;
-            text-align: center;
           }
           #boardData{
             background-color: rgba(255,255,255,0.75);
-          }
-          .chat{
-            font-size: 14px;
           }
           /* width */
           ::-webkit-scrollbar {
@@ -131,21 +114,12 @@
     </head>
 
     <body onload="listener()">
-    	<table width='100%' id='topBar' height='50px' onclick='home()' style='position:fixed; top: 0; left: 0;'>
-    		<tr>
-    			<td width='20%' align='center'>
-            <img src='../images/logo.png' width='40px' height="40px" />
-          </td>
-          <td valign='middle' align='left'>
-            <span id='header'>TGSN Staff HQ</span>
-    			</td>
-    		</tr>
-    	</table><br><br>
       <table width='100%' style='border-spacing: 0px;'>
         <tr>
           <td style='border: 1px solid;' id='board'>
-            <h3><u>Message Board</u></h3>
-            <h4>Welcome to The Gaming Saloon Network Staff HQ! This location will hold important information regarding TGSN Staff!</h4>
+            &nbsp;</br>
+            <h2><u>Message Board</u></h2>
+            <h3>Welcome to The Gaming Saloon Network Staff HQ! This location will hold important information regarding TGSN Staff!</h3>
           </td>
         </tr>
         <tr>
@@ -161,7 +135,7 @@
                     <div style="border: outset; width: 130px; display:inline-block;" align='center' onclick='showMBL()' class='button'>Add Link/Image</div>
                     <div style="border: outset; width: 130px; display:inline-block;" align='center' onclick='showHelp()' class='button'>Help</div>
                   </div>
-                  <div width='100%' id="messages" style='height: 60vh; overflow:auto;'></div>
+                  <div width='100%' id="messages"></div>
                 </td>
               </tr>
             </table>
@@ -213,14 +187,27 @@
                 Line Breaks
                 <ul>
                   <li>
-                    Press Enter to create a line break (Using <br> will break the layout now)
+                    Press Enter to create a line break (Using &lt;br&gt; will break the layout now)
                   </li>
                 </ul>
               </li>
+              <li>
+                Add Link / Add Image Buttons
+                <ul>
+                  <li>
+                    Using these buttons will add an image or link at the end of the message listed in the box.<br>
+                    i.e. If the message box has "Welcome to the app!" and you add a link it will look like this<br>
+                    "Welcome to the app![url='https://tgsnetwork.org']https://tgsnetwork.org[/url]"
+                  </li>
+                  <li>
+                    NOTE: All URLs added must include the http/https or they will not work.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-
       <div id="mbModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -231,8 +218,5 @@
           </div>
         </div>
       </div>
-
-      <div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
-      <script src='../scripts/userData.js'></script>
     </body>
 </html>

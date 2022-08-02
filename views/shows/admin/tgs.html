@@ -26,7 +26,7 @@
           body{
             font-family: Sancreek;
             text-align: center;
-            background-image: url('../../images/background.jpg');
+            background-color: rgba(255,255,255,0.75);
           }
           #board{
             background-color: rgba(255,255,255,0.75);
@@ -34,13 +34,6 @@
           }
           #body, #body a{
             color: white;
-          }
-      		#topBar{
-      			background-color: rgba(0,0,0,1);
-            color: white;
-      		}
-          #header{
-            font-size: 24px;
           }
 
           /* The Modal (background) */
@@ -90,32 +83,11 @@
     </head>
 
     <body onload='showTGSArticles()'>
-    	<table width='100%' id='topBar' height='50px' onclick='home()' style='position:fixed; top: 0; left: 0;'>
-    		<tr>
-    			<td width='20%' align='center'>
-            <img src='../../images/logo.png' width='40px' height="40px" />
-          </td>
-          <td valign='middle'>
-            <span id='header'>TGSN Staff HQ</span>
-    			</td>
-    		</tr>
-    	</table><br><br>
-      <table width='100%' style='background-color: rgba(255,255,255,0.75)'>
+      <table width='100%' height='100%'>
         <tr>
           <td id='showBody' valign='top'></td>
         </tr>
       </table>
-
-      <div id='user' align='center' style='background-color: black; color: white; width: 100%; position:fixed; bottom: 0; left: 0'></div>
-      <script>
-        const app = firebase.app();
-        const db = firebase.firestore();
-
-        function home(){
-          window.location.href = "../../index.html"
-        }
-      </script>
-    	<script src='../../scripts/userData.js'></script>
 
       <!--Modal for Editing (Disable for Staff)-->
       <div id="myModal" class="modal">
